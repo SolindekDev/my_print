@@ -1,5 +1,5 @@
 # My Print
-Just a terrible print implementation in C
+Just a terrible print implementation in C.
 ## Example use
 ```c
 int main(int argc, char** argv) {
@@ -16,5 +16,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
+## Only supports linux machines
+This repository do not support window because we use a linux syscall to write into console.
 ## DON'T USE IT
-Don't use this print because it suck
+Don't use this print because it suck.
