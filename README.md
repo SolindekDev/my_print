@@ -17,6 +17,14 @@ int main(int argc, char** argv) {
 }
 ```
 ## Only supports linux machines
-This repository do not support window because we use a linux syscall to write into console.
+This repository do not support window because we use a linux syscall to write into console and program use lots of linux headers.
+```c
+void syscall_write_char(char c) {
+    char buf[2] = {0};
+    strncat(buf, &c, 1);
+    
+    syscall(SYS_write, 1, buf, strlen(buf)); 
+}
+```
 ## DON'T USE IT
 Don't use this print because it suck.
